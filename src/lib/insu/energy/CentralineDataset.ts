@@ -10,42 +10,85 @@ export type EnergySite = {
 };
 
 export const energySites: EnergySite[] = [
-    { name: "Lurate Caccivio", province: "Como", lat: 45.765861, lng: 8.994639, type: "Solare", energy: 1050 },
-    { name: "Appiano Gentile", province: "Como", lat: 45.735611, lng: 8.980917, type: "Solare", energy: 1080 },
-    { name: "Cantù", province: "Como", lat: 45.738056, lng: 9.132417, type: "Solare", energy: 1100 },
-    { name: "Cernobbio", province: "Como", lat: 45.843028, lng: 9.071944, type: "Solare", energy: 1200 },
-    { name: "Como", province: "Como", lat: 45.808056, lng: 9.085176, type: "Solare", energy: 1300 },
-
-    { name: "Monte Palanzone", province: "Como", lat: 45.862028, lng: 9.203722, type: "Eolico", energy: 4700 },
-    { name: "Monte Bisbino", province: "Como", lat: 45.872139, lng: 9.059278, type: "Eolico", energy: 5000 },
-    { name: "Monte San Primo", province: "Como", lat: 45.916667, lng: 9.208889, type: "Eolico", energy: 5100 },
-    { name: "Monte Generoso", province: "Como", lat: 45.931556, lng: 9.019583, type: "Eolico", energy: 5600 },
-
-    { name: "Malgrate", province: "Lecco", lat: 45.849194, lng: 9.376, type: "Solare", energy: 1150 },
-    { name: "Valmadrera", province: "Lecco", lat: 45.847444, lng: 9.358028, type: "Solare", energy: 1180 },
-    { name: "Lecco", province: "Lecco", lat: 45.857278, lng: 9.405167, type: "Solare", energy: 1250 },
-
-    { name: "Monte San Martino", province: "Lecco", lat: 45.944472, lng: 9.387528, type: "Eolico", energy: 4000 },
-    { name: "Monte Cornizzolo", province: "Lecco", lat: 45.837083, lng: 9.302444, type: "Eolico", energy: 4300 },
-    { name: "Monte Resegone", province: "Lecco", lat: 45.85875, lng: 9.468361, type: "Eolico", energy: 4900 },
-    { name: "Monte Legnone", province: "Lecco", lat: 46.083444, lng: 9.399444, type: "Eolico", energy: 5800 },
-
-    { name: "Tradate", province: "Varese", lat: 45.709806, lng: 8.909583, type: "Solare", energy: 1100 },
-    { name: "Busto Arsizio", province: "Varese", lat: 45.611972, lng: 8.852028, type: "Solare", energy: 1180 },
-    { name: "Gallarate", province: "Varese", lat: 45.660278, lng: 8.791389, type: "Solare", energy: 1190 },
-    { name: "Varese", province: "Varese", lat: 45.818194, lng: 8.826389, type: "Solare", energy: 1220 },
-    { name: "Saronno", province: "Varese", lat: 45.624417, lng: 9.035833, type: "Solare", energy: 1250 },
-
-    { name: "Monte Chiusarella", province: "Varese", lat: 45.873611, lng: 8.814083, type: "Eolico", energy: 4500 },
-    { name: "Monte Campo dei Fiori", province: "Varese", lat: 45.895722, lng: 8.805333, type: "Eolico", energy: 5400 },
-
-    { name: "Biasca", province: "Ticino", lat: 46.35, lng: 8.966667, type: "Solare", energy: 1350 },
-    { name: "Bellinzona", province: "Ticino", lat: 46.189806, lng: 9.035194, type: "Solare", energy: 1400 },
-    { name: "Locarno", province: "Ticino", lat: 46.1835, lng: 8.797528, type: "Solare", energy: 1450 },
-    { name: "Mendrisio", province: "Ticino", lat: 45.888528, lng: 8.983444, type: "Solare", energy: 1500 },
-
-    { name: "Lugano", province: "Ticino", lat: 46.002222, lng: 8.955278, type: "Idroelettrico", energy: 3600 },
-    { name: "Monte Tamaro", province: "Ticino", lat: 46.1, lng: 8.883333, type: "Eolico", energy: 5200 },
+    // COMO - Solare
+    { name: "Cantù", province: "Como", lat: 45.73806, lng: 9.13242, type: "Solare", energy: 2.40 },
+    { name: "Cernobbio", province: "Como", lat: 45.84303, lng: 9.07194, type: "Solare", energy: 4.20 },
+    { name: "Como", province: "Como", lat: 45.80472, lng: 9.07411, type: "Solare", energy: 6.00 },
+    
+    // COMO - Eolico
+    { name: "Monte Palanzone", province: "Como", lat: 45.86203, lng: 9.20372, type: "Eolico", energy: 15.40 },
+    { name: "Monte Croce di Campo", province: "Como", lat: 46.10678, lng: 9.14933, type: "Eolico", energy: 17.20 },
+    { name: "Monte Bisbino", province: "Como", lat: 45.87214, lng: 9.05928, type: "Eolico", energy: 5.00 },
+    { name: "Monte San Primo", province: "Como", lat: 45.91667, lng: 9.20889, type: "Eolico", energy: 6.40 },
+    { name: "Monte Lema", province: "Como", lat: 46.04072, lng: 8.83283, type: "Eolico", energy: 10.00 },
+    { name: "Monte Generoso", province: "Como", lat: 45.93156, lng: 9.01958, type: "Eolico", energy: 15.00 },
+    
+    // COMO - Idroelettrico
+    { name: "Torrente Cuccio", province: "Como", lat: 46.03033, lng: 9.12275, type: "Idroelettrico", energy: 60.00 },
+    { name: "Menaggio", province: "Como", lat: 46.02394, lng: 9.24203, type: "Idroelettrico", energy: 55.00 },
+    { name: "Argegno", province: "Como", lat: 45.94473, lng: 9.12916, type: "Idroelettrico", energy: 28.00 },
+    { name: "Colico", province: "Como", lat: 46.15129, lng: 9.37868, type: "Idroelettrico", energy: 65.00 },
+    { name: "Consiglio di Rumo", province: "Como", lat: 46.13730, lng: 9.30382, type: "Idroelettrico", energy: 58.00 },
+    { name: "Domaso", province: "Como", lat: 46.14869, lng: 9.32994, type: "Idroelettrico", energy: 60.00 },
+    { name: "Acquaseria", province: "Como", lat: 46.05205, lng: 9.26039, type: "Idroelettrico", energy: 45.00 },
+    { name: "Dongo", province: "Como", lat: 46.12435, lng: 9.28596, type: "Idroelettrico", energy: 52.00 },
+    { name: "Ossuccio", province: "Como", lat: 45.96687, lng: 9.18714, type: "Idroelettrico", energy: 35.00 },
+    { name: "Dervio", province: "Como", lat: 46.07247, lng: 9.29783, type: "Idroelettrico", energy: 50.00 },
+    { name: "Sorico", province: "Como", lat: 46.16926, lng: 9.38112, type: "Idroelettrico", energy: 62.00 },
+    { name: "Tremezzo", province: "Como", lat: 45.98155, lng: 9.22239, type: "Idroelettrico", energy: 40.00 },
+    { name: "Gera Lario", province: "Como", lat: 46.16798, lng: 9.36566, type: "Idroelettrico", energy: 63.00 },
+    
+    // LECCO - Solare
+    { name: "Malgrate", province: "Lecco", lat: 45.84919, lng: 9.37728, type: "Solare", energy: 3.30 },
+    { name: "Valmadrera", province: "Lecco", lat: 45.84883, lng: 9.36219, type: "Solare", energy: 4.00 },
+    { name: "Lecco", province: "Lecco", lat: 45.85728, lng: 9.40517, type: "Solare", energy: 5.10 },
+    
+    // LECCO - Eolico
+    { name: "Monte San Martino", province: "Lecco", lat: 45.94447, lng: 9.38753, type: "Eolico", energy: 4.00 },
+    { name: "Monte Cornizzolo", province: "Lecco", lat: 45.83708, lng: 9.30244, type: "Eolico", energy: 9.00 },
+    { name: "Monte Due Mani", province: "Lecco", lat: 45.89983, lng: 9.44839, type: "Eolico", energy: 14.00 },
+    { name: "Monte Resegone", province: "Lecco", lat: 45.85875, lng: 9.46836, type: "Eolico", energy: 19.00 },
+    { name: "Monte Grigna", province: "Lecco", lat: 45.93339, lng: 9.38319, type: "Eolico", energy: 8.20 },
+    { name: "Monte Pizzo dei Tre Signori", province: "Lecco", lat: 46.01219, lng: 9.52736, type: "Eolico", energy: 13.20 },
+    { name: "Monte Legnone", province: "Lecco", lat: 46.08344, lng: 9.39944, type: "Eolico", energy: 18.20 },
+    
+    // LECCO - Idroelettrico
+    { name: "Pescate", province: "Lecco", lat: 45.83172, lng: 9.39631, type: "Idroelettrico", energy: 7.20 },
+    
+    // TICINO - Solare
+    { name: "Biasca", province: "Ticino", lat: 46.35000, lng: 8.96667, type: "Solare", energy: 6.50 },
+    { name: "Bellinzona", province: "Ticino", lat: 46.18981, lng: 9.03519, type: "Solare", energy: 7.40 },
+    { name: "Locarno", province: "Ticino", lat: 46.18350, lng: 8.79753, type: "Solare", energy: 8.30 },
+    { name: "Mendrisio", province: "Ticino", lat: 45.88853, lng: 8.95306, type: "Solare", energy: 9.20 },
+    
+    // TICINO - Eolico
+    { name: "Val Bedretto", province: "Ticino", lat: 46.46938, lng: 8.48408, type: "Eolico", energy: 17.20 },
+    { name: "Monte Tamaro", province: "Ticino", lat: 46.10000, lng: 8.88333, type: "Eolico", energy: 8.20 },
+    { name: "Monte Brè", province: "Ticino", lat: 46.01306, lng: 8.98167, type: "Eolico", energy: 11.40 },
+    { name: "Monte Generoso", province: "Ticino", lat: 45.93156, lng: 9.01958, type: "Eolico", energy: 16.40 },
+    
+    // TICINO - Idroelettrico
+    { name: "Lugano", province: "Ticino", lat: 46.00222, lng: 8.95806, type: "Idroelettrico", energy: 13.00 },
+    
+    // VARESE - Solare
+    { name: "Tradate", province: "Varese", lat: 45.70981, lng: 8.90958, type: "Solare", energy: 2.40 },
+    { name: "Busto Arsizio", province: "Varese", lat: 45.61197, lng: 8.85148, type: "Solare", energy: 4.00 },
+    { name: "Gallarate", province: "Varese", lat: 45.66281, lng: 8.79283, type: "Solare", energy: 4.10 },
+    { name: "Gallarate 2", province: "Varese", lat: 45.66203, lng: 8.79039, type: "Solare", energy: 4.20 },
+    { name: "Varese", province: "Varese", lat: 45.81819, lng: 8.82728, type: "Solare", energy: 4.40 },
+    { name: "Saronno", province: "Varese", lat: 45.62583, lng: 9.03728, type: "Solare", energy: 5.10 },
+    
+    // VARESE - Eolico
+    { name: "Monte Chiusarella", province: "Varese", lat: 45.87361, lng: 8.81408, type: "Eolico", energy: 12.20 },
+    { name: "Monte Monarco", province: "Varese", lat: 45.86281, lng: 8.84161, type: "Eolico", energy: 14.00 },
+    { name: "Monte Tre Croci", province: "Varese", lat: 45.86475, lng: 8.78064, type: "Eolico", energy: 15.40 },
+    { name: "Monte Sasso del Ferro", province: "Varese", lat: 45.91100, lng: 8.64267, type: "Eolico", energy: 8.20 },
+    { name: "Monte Nudo", province: "Varese", lat: 45.92356, lng: 8.68867, type: "Eolico", energy: 10.00 },
+    { name: "Monte Campo dei Fiori", province: "Varese", lat: 45.89572, lng: 8.80533, type: "Eolico", energy: 11.40 },
+    
+    // VARESE - Idroelettrico
+    { name: "Monte Fenera", province: "Varese", lat: 45.70219, lng: 8.29797, type: "Idroelettrico", energy: 16.20 },
+    { name: "Luino", province: "Varese", lat: 46.00444, lng: 8.74303, type: "Idroelettrico", energy: 12.20 }
 ];
 
 export const energyTypeColors: Record<EnergyType, string> = {
